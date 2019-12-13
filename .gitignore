@@ -1,0 +1,6 @@
+vendor
+config.php
+cache/*
+!cache/.gitkeep
+last.json
+log.txt
