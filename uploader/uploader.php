@@ -18,7 +18,7 @@ class Uploader
 
       // if we have already uploaded this image, stop
       if (isset($storedData->last_modified) && $storedData->last_modified === $data->last_modified) {
-        $this->log("Image hasn't changed since last upload: " . $storedData->title);
+        // $this->log("Image hasn't changed since last upload: " . $storedData->title);
         return;
       } else {
         $this->log("Uploading image: " . $data->title);
