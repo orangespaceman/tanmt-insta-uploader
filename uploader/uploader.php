@@ -2,9 +2,9 @@
 
 class Uploader
 {
-  private $cachePath = "cache/";
-  private $jsonPath = "last.json";
-  private $logFile = "log.txt";
+  private $cachePath = __DIR__ . "/../cache/";
+  private $jsonPath = __DIR__ . "/../last.json";
+  private $logFile = __DIR__ . "/../log.txt";
 
 
   public function download($url)
@@ -18,7 +18,7 @@ class Uploader
 
       // if we have already uploaded this image, stop
       if (isset($storedData->last_modified) && $storedData->last_modified === $data->last_modified) {
-        // $this->log("Image hasn't changed since last upload: " . $storedData->title);
+        $this->log("Image hasn't changed since last upload: " . $storedData->title);
         return;
       } else {
         $this->log("Uploading image: " . $data->title);
