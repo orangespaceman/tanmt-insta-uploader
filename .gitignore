@@ -1,6 +1,14 @@
+# php
 vendor
 config.php
+
+# js
+node_modules
+config.json
+
+# both
 cache/*
 !cache/.gitkeep
 last.json
+next.json
 log.txt
