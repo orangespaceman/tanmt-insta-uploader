@@ -17,7 +17,7 @@ const logFile = `${__dirname}/../log.txt`;
   const nextData = await getData(nextJsonPath);
   if (!lastData || !nextData) return;
 
-  if (lastData.last_modified && nextData.last_modified && nextData.last_modified === lastData.last_modified) {
+  if (lastData.last_modified && nextData.last_modified && Math.ceil(nextData.last_modified) === Math.ceil(lastData.last_modified)) {
     // log("Image hasn't changed since last upload: " + lastData.title);
     return;
   } else {
