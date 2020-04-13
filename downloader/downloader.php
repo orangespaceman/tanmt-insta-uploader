@@ -17,7 +17,7 @@ class Downloader
       $storedData = json_decode($storedJson);
 
       // if we have already uploaded this image, stop
-      if (isset($storedData->last_modified) && $storedData->last_modified === $data->last_modified) {
+      if (isset($storedData->last_modified) && ceil($storedData->last_modified) === ceil($data->last_modified)) {
         // $this->log("Image hasn't changed since last upload: " . $storedData->title);
         return;
       } else {
