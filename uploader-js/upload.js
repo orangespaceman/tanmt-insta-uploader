@@ -40,7 +40,7 @@ const logFile = `${__dirname}/../log.txt`;
 })();
 
 async function login() {
-  const config = require(`${__dirname}/config.json`);
+  const config = require(`${__dirname}/../config.json`);
   ig.state.generateDevice(config.username);
   // ig.state.proxyUrl = config.proxy;
   await ig.account.login(config.username, config.password);
